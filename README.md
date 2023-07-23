@@ -7,7 +7,7 @@ I want to acknowledge with profound gratitude all the writers cited in this work
 ## DATA CREDIT
 UDACITY
 
-STARBUCK
+STARBUCKs
 
 ##  PROJECT MOTIVATION
 This project is meant to answer some questions that stakeholders would have about the different promo offers that starbuck offers, giving clearity to the conversion rate of the promo
@@ -41,10 +41,11 @@ event (str) - record description (ie transaction, offer received, offer viewed, 
 person (str) - customer id
 time (int) - time in hours since start of test. The data begins at time t=0
 value - (dict of strings) - either an offer id or transaction amount depending on the record
-DATA PREPARATION
+
+### DATA PREPARATION
 Dealing with incorrect data type: The became_member_on column in the profile.json file is strings.
 
-Missing Values: The missing values in the gender column of the profile.json file was replaced by the mode gender. Also the income column in the same dataset has missing variable which was replaced with the mean income
+Missing Values: The missing values in the gender column of the profile.json file was replaced by the male gender. Also the income column in the same dataset has missing variable which was replaced with the mean income
 
 ### LIBRARIES USED
 The following libraries were used to excute this project
@@ -61,9 +62,9 @@ This libraries work in latest python and they can be installed by running this c
 pip install -r requirement.txt
 
 ### SUMMARY OF THE RESULTS
-Firstly I built a modle that predicts the event
+I built two models using 4 different classifiers on two different scenarios one including the offer type as aprt of the independent variable and the other excluding it. 
 
-The acccuracy for individual model are as follows:
+The acccuracy for the first model are as follows:
 
 Model	Accuracy Score
 0 KNN	0.735714
@@ -71,9 +72,9 @@ Model	Accuracy Score
 2	ADA BOOST	0.725649
 3	Naive Bayes	0.447499
 
-Secondly I built a model that predicts the event including the offer type(bogo, discount and information)
+The second model includes the offer type(bogo, discount and information) as part of the independent variable
 
-The acccuracy for individual model are as follows:
+The acccuracy for the second  model are as follows:
 
 Model Accuracy Score
 
@@ -81,3 +82,5 @@ Model Accuracy Score
 1	RANDOM FOREST	0.643182
 2	ADA BOOST	0.725649
 3	Naive Bayes	0.447499
+
+https://medium.com/@emikocarpe/promos-by-starbucks-9d888d844357
